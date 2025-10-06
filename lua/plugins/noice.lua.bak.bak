@@ -1,0 +1,59 @@
+return {
+  "folke/noice.nvim",
+  opts = {
+    -- routes = {
+    --   {
+    --     filter = {
+    --       event = "msg_show",
+    --       any = {
+    --         { find = "%d+L, %d+B" },
+    --         { find = "; after #%d+" },
+    --         { find = "; before #%d+" },
+    --       },
+    --     },
+    --     -- view = "mini",
+    --     skip = true,
+    --   },
+    -- },
+    routes = {
+      -- 拦截通知事件
+      {
+        filter = {
+          event = "notify",
+          find = "ContentModified",
+        },
+        opts = { skip = true }, -- 过滤该提示
+      },
+      {
+        filter = {
+          event = "notify",
+          find = "fewer lines",
+        },
+        opts = { skip = true },
+      },
+      {
+        filter = {
+          event = "notify",
+          find = "lines yanked",
+        },
+        opts = { skip = true },
+      },
+    },
+    lsp = {
+      progress = {
+        enabled = false, -- 👈 关闭 LSP 进度消息
+      },
+      hover = { enabled = false },
+      signature = { enabled = false },
+    },
+    presets = {
+      lsp_doc_border = true,
+    },
+    messages = {
+      enabled = false,
+    },
+    cmdline = {
+      enabled = true,
+    },
+  },
+}

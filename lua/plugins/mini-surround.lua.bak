@@ -1,0 +1,14 @@
+return {
+  "echasnovski/mini.surround",
+  enabled = false,
+  opts = {
+    custom_surroundings = {
+      ["{"] = { add = { "{", "}" } },
+      ["["] = { add = { "[", "]" } },
+      ["("] = { add = { "(", ")" } },
+      ["'"] = { add = { "'", "'" } },
+      ['"'] = { add = { '"', '"' } },
+      ["`"] = { add = { "`", "`" } },
+    },
+  },
+}

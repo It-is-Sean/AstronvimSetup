@@ -1,0 +1,10 @@
+return {
+  "folke/snacks.nvim",
+  opts = function(_, opts)
+    opts.notifier = opts.notifier or {}
+    opts.notifier.enabled = true
+    opts.notifier.stages = "fade_in_slide_out" -- 可选：slide / fade / static
+    opts.notifier.timeout = 3000 -- 可选：通知显示时间（毫秒）
+    return opts
+  end,
+}
