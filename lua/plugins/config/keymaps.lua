@@ -5,13 +5,25 @@ return {
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs
-    ["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-    ["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+    ["L"] = {
+      function()
+        require("astrocore.buffer").nav(vim.v.count1)
+      end,
+      desc = "Next buffer",
+    },
+    ["H"] = {
+      function()
+        require("astrocore.buffer").nav(-vim.v.count1)
+      end,
+      desc = "Previous buffer",
+    },
 
     -- mappings seen under group name "Buffer"
     ["<Leader>bd"] = {
       function()
-        require("astroui.status.heirline").buffer_picker(function(bufnr) require("astrocore.buffer").close(bufnr) end)
+        require("astroui.status.heirline").buffer_picker(function(bufnr)
+          require("astrocore.buffer").close(bufnr)
+        end)
       end,
       desc = "Close buffer from tabline",
     },
@@ -31,12 +43,12 @@ return {
 
     -- setting a mapping to false will disable it
     -- ["<C-S>"] = false,
-    ["<C-a>"] = { "ggVG", desc = "Select all" },
+    ["<D-a>"] = { "ggVG", desc = "Select all" },
     ["gb"] = { "<C-o>", desc = "Go back" },
   },
   i = {
-    ["<C-s>"] = { "<cmd>w<CR>", desc = "Save current file" },
-    ["<C-S>"] = { "<cmd>wa<CR>", desc = "Save all file" },
-    ["<C-q>"] = { "<cmd>qa<CR>", desc = "Quit astronvim" },
+    ["<D-s>"] = { "<cmd>w<CR>", desc = "Save current file" },
+    ["<D-S>"] = { "<cmd>wa<CR>", desc = "Save all file" },
+    ["<D-q>"] = { "<cmd>qa<CR>", desc = "Quit astronvim" },
   },
 }
