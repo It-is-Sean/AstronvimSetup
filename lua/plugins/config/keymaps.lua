@@ -47,8 +47,8 @@ return {
     ["gb"] = { "<C-o>", desc = "Go back" },
   },
   i = {
-    ["<D-s>"] = { "<cmd>w<CR>", desc = "Save current file" },
-    ["<D-S>"] = { "<cmd>wa<CR>", desc = "Save all file" },
-    ["<D-q>"] = { "<cmd>qa<CR>", desc = "Quit astronvim" },
+    ["<C-s>"] = { "<cmd>w<CR>", desc = "Save current file" },
+    ["<C-S>"] = { "<cmd>wa<CR>", desc = "Save all file" },
+    ["<C-q>"] = { "<cmd>qa<CR>", desc = "Quit astronvim" },
   },
 }
