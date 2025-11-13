@@ -23,4 +23,5 @@ return {
 	{ import = "astrocommunity.pack.markdown" },
 	{ import = "astrocommunity.markdown-and-latex.markview-nvim" },
 	{ import = "astrocommunity.editing-support.multiple-cursors-nvim" },
+	{ import = "astrocommunity.motion.hop-nvim" },
 }
