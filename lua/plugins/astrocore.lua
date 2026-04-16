@@ -52,6 +52,20 @@ return {
         -- This can be found in the `lua/lazy_setup.lua` file
       },
     },
+    autocmds = {
+      -- c_indent_settings = {
+      --   {
+      --     event = "FileType",
+      --     pattern = { "c", "cpp" },
+      --     callback = function()
+      --       vim.opt_local.shiftwidth = 4
+      --       vim.opt_local.tabstop = 4
+      --       vim.opt_local.softtabstop = 4
+      --       vim.opt_local.expandtab = true
+      --     end,
+      --   },
+      -- },
+    },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = require "plugins.config.keymaps",
